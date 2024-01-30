@@ -1,0 +1,22 @@
+package org.example;
+
+import javax.xml.crypto.Data;
+import java.io.IOException;
+
+// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
+// then press Enter. You can now see whitespace characters in your code.
+public class Main {
+    public static void main(String[] args) {
+        Database d=null;
+        try{
+            d=Database.get_instance();
+        } catch(Exception e) {
+            System.out.println("Unable to load the data");
+            System.exit(1);
+        }
+
+        User_interface u=new User_interface(d);
+
+
+    }
+}
